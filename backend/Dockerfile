@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
 COPY app.py .
 COPY requirements.txt .
 COPY chromium/ ./chromium/
-RUN mkdir -p /app/tmp
+RUN mkdir -p /app/tmp /app/db
 
 # Make sure Chrome binaries are executable
 RUN chmod +x /app/chromium/chrome-linux64/chrome
